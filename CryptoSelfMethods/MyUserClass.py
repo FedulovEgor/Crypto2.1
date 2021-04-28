@@ -20,8 +20,7 @@ class MyUser:
 
     def create_k(self, anotherUserX):
         """Вычисление числа k пользователя, который получил случайное число от другого пользователя"""
-        # self.k = ModExp(anotherUserX, self.x, self.p)
-        self.k = diffie_hellman(anotherUserX, self.x, self.q, self.p)
+        self.k = mod_exp(anotherUserX, self.x, self.p)
         print(f"""Пользователь {id(self)} сгенерировал число k = {self.k}""")
 
     @staticmethod

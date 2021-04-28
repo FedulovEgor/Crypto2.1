@@ -2,13 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="04435044-4782-40ee-906c-8493ea46dc18" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CryptoSelfMethods/GeneratePrimeNumber.py" beforeDir="false" afterPath="$PROJECT_DIR$/CryptoSelfMethods/GeneratePrimeNumber.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CryptoSelfMethods/MyUserClass.py" beforeDir="false" afterPath="$PROJECT_DIR$/CryptoSelfMethods/MyUserClass.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CryptoSelfMethods/SelfDiffueHelman.py" beforeDir="false" afterPath="$PROJECT_DIR$/CryptoSelfMethods/SelfDiffueHelman.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CryptoSelfMethods/SelfModExp.py" beforeDir="false" afterPath="$PROJECT_DIR$/CryptoSelfMethods/SelfModExp.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
