@@ -1,4 +1,4 @@
-def ModExp(a, b, n):
+def mod_exp(a, b, n):
     """Возведение в степень по модулю"""
     beta = [b % 2]
     b = b // 2
@@ -6,7 +6,6 @@ def ModExp(a, b, n):
         beta.append(b % 2)
         b = b // 2
 
-    d = 1
     d = 1
     for i in range(len(beta) - 1, -1, -1):
         d = (d * d) % n

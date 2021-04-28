@@ -1,11 +1,11 @@
 from CryptoSelfMethods.MyUserClass import MyUser
-from CryptoSelfMethods.SelfDiffueHelman import GenerateG
+from CryptoSelfMethods.SelfDiffueHelman import generate_g
 
 
 def act_1():
     """Создать общий секретный ключ k"""
     N = 109417386415705274218097073220403576120037329454492059909138421314763499842889347847179972578912673324976257528997818337970765372440271467435315933543338974563728164539274563715647292635473920374657489365648392736457483
-    g, q, p = GenerateG(N)
+    g, q, p = generate_g(N)
     print(f"""Число g = {g}
     \nЧисло q = {q}
     \nЧисло p = {p}
@@ -27,13 +27,13 @@ def users():
     user1 = MyUser(p, g, q)
     user2 = MyUser(p, g, q)
 
-    user1.GenerateRandomNum()
-    user2.GenerateRandomNum()
+    user1.generate_random_number()
+    user2.generate_random_number()
 
-    user1.CreateK(user2.X)
-    user2.CreateK(user1.X)
+    user1.create_k(user2.X)
+    user2.create_k(user1.X)
 
-    print(MyUser.CheckK(user1.k, user2.k))
+    print(MyUser.check_k(user1.k, user2.k))
 
 
 def Menu():

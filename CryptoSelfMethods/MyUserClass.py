@@ -13,20 +13,20 @@ class MyUser:
         self.q = q
         self.x = randint(2, self.p - 1)
 
-    def GenerateRandomNum(self):
+    def generate_random_number(self):
         """Сгенерировать случайное число пользователя"""
-        self.X = DiffieHelman(self.g, self.x, self.q, self.p)
+        self.X = diffie_hellman(self.g, self.x, self.q, self.p)
         print(f"""Пользователь {id(self)} сгенерировал число {self.X}""")
 
-    def CreateK(self, anotherUserX):
+    def create_k(self, anotherUserX):
         """Вычисление числа k пользователя, который получил случайное число от другого пользователя"""
         # self.k = ModExp(anotherUserX, self.x, self.p)
-        self.k = DiffieHelman(anotherUserX, self.x, self.q, self.p)
+        self.k = diffie_hellman(anotherUserX, self.x, self.q, self.p)
         print(f"""Пользователь {id(self)} сгенерировал число k = {self.k}""")
 
     @staticmethod
-    def CheckK(k1, k2):
+    def check_k(k1, k2):
         """Проверка чисел k и k' пользователей"""
         if k1 == k2:
-            return True
-        return False
+            return "Числа одинаковые"
+        return "Числа разные"

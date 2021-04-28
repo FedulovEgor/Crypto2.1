@@ -1,23 +1,23 @@
 import random
 
 
-def GeneratePrime(N):
+def generate_prime(N):
     """Генерация простого числа"""
     m = N // 2  # Генерация случайного числа
     n = random.randint(2, m)  # из интервала 2..N/2
     n = 2 * n - 1  # Получение нечетного случайного числа
 
     # Пока число не простое, продолжаем генерировать
-    while IsPrime(n) != True:
+    while is_prime(n) != True:
         m = N // 2  # Генерация случайного числа
         n = random.randint(2, m)  # из интервала 2..N/2
         n = 2 * n - 1  # Получение нечетного случайного числа
     return n
 
 
-def IsPrime(n):
+def is_prime(n):
     """Тест на проверку простоты числа с помощью решета Эратосфена, иначе тест Рабина-Миллера"""
-    p = Eratosphen(810)
+    p = eratosphen(810)
 
     m = len(p)
 
@@ -33,10 +33,10 @@ def IsPrime(n):
                 return False  # иначе n - составное
 
     r = 60  # Количество повторений теста Рабина-Миллера
-    return RabinMiller(n, r)
+    return rabin_miller(n, r)
 
 
-def Eratosphen(n):
+def eratosphen(n):
     """Генерирует решето Эратосфена"""
     a = []
 
@@ -66,7 +66,7 @@ def Eratosphen(n):
     return p
 
 
-def RabinMiller(n, r):
+def rabin_miller(n, r):
     """Тест Рабина-Миллера для проверки простоты числа"""
     b = n - 1
     k = -1
@@ -85,7 +85,7 @@ def RabinMiller(n, r):
     for j in range(r):
         a = random.randint(2, n - 1)  # Получаем случайное основание a
         # Проверяем взаимную простоту a и n
-        if Euclid(a, n) > 1:
+        if euclid(a, n) > 1:
             return False
         # Возведение числа a в степень n-1
         # с помощью метода повторного возведения
@@ -107,8 +107,8 @@ def RabinMiller(n, r):
     return True
 
 
-def Euclid(a, b):
+def euclid(a, b):
     """Алгоритм Евклида для нахождения НОД"""
     if b == 0:
         return a
-    return Euclid(b, a % b)
+    return euclid(b, a % b)
