@@ -1,10 +1,9 @@
-from CryptoSelfMethods.GeneratePrimeNumber import *
-from CryptoSelfMethods.SelfModExp import *
 from CryptoSelfMethods.SelfDiffueHelman import *
 from random import randint
 
 
 class MyUser:
+    """Класс, реализующий пользователя"""
     def __init__(self, p, g,q):
         self.X = None
         self.k = None

@@ -4,7 +4,7 @@ from CryptoSelfMethods.SelfModExp import *
 
 
 def generate_g(N):
-    """Генерация параметра g"""
+    """Генерация параметров g, p, q"""
     q = generate_prime(2 ** 256)
 
     n = randint(2, N)

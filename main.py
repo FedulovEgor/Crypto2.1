@@ -12,31 +12,25 @@ def act_1():
     \n""")
 
 
-def act_2():
-    pass
-
-
-def act_3():
-    pass
-
-
 def users():
+    """Иммитация обмена данными между пользователями"""
     g = int(input('Введите g\n--> '))
     p = int(input('Введите p\n--> '))
     q = int(input('Введите q\n--> '))
     user1 = MyUser(p, g, q)
     user2 = MyUser(p, g, q)
 
-    user1.generate_random_number()
-    user2.generate_random_number()
+    user1.generate_random_number()  # Пользователь 1 генерирует случайное число
+    user2.generate_random_number()  # Пользователь 2 генерирует случайное число
 
-    user1.create_k(user2.X)
-    user2.create_k(user1.X)
+    user1.create_k(user2.X)  # Пользователь 1 генерирует число k
+    user2.create_k(user1.X)  # Пользователь 2 генерирует число k'
 
     print(MyUser.check_k(user1.k, user2.k))
+    # Если все сделано правильно, то числа будут одинаковые, следовательно общий ключ создан
 
 
-def Menu():
+def menu():
     while True:
         act = int(input(
             "Выберите действие:"
@@ -54,4 +48,4 @@ def Menu():
 
 
 if __name__ == "__main__":
-    Menu()
+    menu()
